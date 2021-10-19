@@ -1,11 +1,13 @@
 <div class="super_duper_container">
   <div class="super_container">
     <div class="title">
-      <h1>Hello World</h1>
+      <h1>Top {{ heroes.length }} Heroes</h1>
     </div>
 
     <ul class="heroes">
-      <li *ngFor="let hero of heroes">{{ hero.name }}</li>
+      <li *ngFor="let hero of heroes">
+        {{ hero.name }}
+      </li>
     </ul>
   </div>
 </div>

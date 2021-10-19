@@ -6,6 +6,7 @@ type Hero = {
 };
 
 export const HEROES: Hero[] = [
+  { id: 24, name: 'Super Tilsa' },
   { id: 11, name: 'Dr Nice' },
   { id: 12, name: 'Narco' },
   { id: 13, name: 'Bombasto' },
@@ -23,7 +24,6 @@ export const HEROES: Hero[] = [
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-
 export class AppComponent {
   title = 'hello-world';
   heroes = HEROES;

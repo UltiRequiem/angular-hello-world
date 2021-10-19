@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
 
 type Hero = {
   id: number;
@@ -6,17 +6,17 @@ type Hero = {
 };
 
 export const HEROES: Hero[] = [
-  { id: 24, name: 'Super Tilsa' },
-  { id: 11, name: 'Dr Nice' },
-  { id: 12, name: 'Narco' },
-  { id: 13, name: 'Bombasto' },
-  { id: 14, name: 'Celeritas' },
-  { id: 15, name: 'Magneta' },
-  { id: 16, name: 'RubberMan' },
-  { id: 17, name: 'Dynama' },
-  { id: 18, name: 'Dr IQ' },
-  { id: 19, name: 'Magma' },
-  { id: 20, name: 'Tornado' },
+  { id: 24, name: "Super Tilsa" },
+  { id: 11, name: "Dr Nice" },
+  { id: 12, name: "Narco" },
+  { id: 13, name: "Bombasto" },
+  { id: 14, name: "Celeritas" },
+  { id: 15, name: "Magneta" },
+  { id: 16, name: "RubberMan" },
+  { id: 17, name: "Dynama" },
+  { id: 18, name: "Dr IQ" },
+  { id: 19, name: "Magma" },
+  { id: 20, name: "Tornado" },
 ];
 
 function shuffleHeroes(array: Hero[]) {
@@ -24,15 +24,15 @@ function shuffleHeroes(array: Hero[]) {
     const j = Math.floor(Math.random() * (i + 1));
     [array[i], array[j]] = [array[j], array[i]];
   }
-  return array
+  return array;
 }
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.css"],
 })
 export class AppComponent {
-  title = 'hello-world';
+  title = "hello-world";
   heroes = shuffleHeroes(HEROES);
 }

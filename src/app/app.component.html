@@ -1,13 +1,25 @@
 <div class="super_duper_container">
   <div class="super_container">
+    <div class="mobile">
+      <img src="../assets/logo.jpg" alt="" />
+    </div>
     <div class="title">
-      <h1>Top {{ heroes.length }} Heroes</h1>
+      <h1>Top {{ heroes.length - 1 }} Heroes</h1>
     </div>
 
     <ul class="heroes">
-      <li *ngFor="let hero of heroes">
+      <li *ngFor="let hero of heroes.slice(0, heroes.length - 1)">
         {{ hero.name }}
       </li>
     </ul>
+    <div class="mobile">
+      <h1>So you are on mobile?</h1>
+      <p id="extra_hero_message">Here is an extra Hero:</p>
+      <p class="mobile_hero">{{ heroes[heroes.length - 1].name }}</p>
+    </div>
+
+    <footer class="footer">
+      <p>© 2021 UltiRequiem</p>
+    </footer>
   </div>
 </div>

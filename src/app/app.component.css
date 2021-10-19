@@ -1,7 +1,25 @@
 ::ng-deep * {
   margin: 0;
-  overflow: hidden;
   padding: 0;
+  overflow: hidden;
+}
+
+.mobile {
+  margin-top: 5%;
+  display: none;
+  text-align: center;
+}
+
+.mobile img {
+  height: auto;
+  max-width: 100%;
+  width: 35%;
+  border: 1px solid red;
+  border-radius: 40px;
+}
+
+.mobile img:hover {
+  box-shadow: 0 0 20px 1px rgba(0, 140, 186, 0.5);
 }
 
 .title {
@@ -27,6 +45,44 @@
   content: " ⭐";
 }
 
+.mobile_hero::before {
+  content: "🚀 ";
+}
+
+.mobile #extra_hero_message {
+  margin-top: 3%;
+  font-size: 150%;
+  color: red;
+}
+
+.mobile h1 {
+  text-decoration: underline;
+}
+
+.mobile_hero::after {
+  content: " ⭐";
+}
+
+.mobile_hero {
+  margin-top: 3%;
+
+  font-size: 250%;
+
+  background-image: linear-gradient(
+    to left,
+    yellow,
+    violet,
+    indigo,
+    blue,
+    green,
+    orange,
+    red
+  );
+
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
 .super_container {
   margin-top: 10%;
 
@@ -39,4 +95,18 @@
   margin: 0;
   border: 0;
   background: linear-gradient(#e66465, #9198e5);
+}
+
+@media (max-width: 640px) {
+  .mobile {
+    display: block;
+  }
+}
+
+.footer {
+  margin-top: 5%;
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  text-align: center;
 }
